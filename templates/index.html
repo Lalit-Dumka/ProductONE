@@ -1,0 +1,996 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block title %}Home{% endblock title %} 
+
+
+{% block heroArea %}
+<section class="hero-area overlay container-fluid d-flex align-items-center justify-content-center position-absolute">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+        <div class="hero-text text-center">
+          <div class="section-heading">
+            <h2>RoomWatcher</h2>
+            <div class="container">
+              <p>
+                <b><a href="#">Find</a></b> the best
+                <span class="typed-text"></span
+                ><span class="cursor">&nbsp;</span><br />or List your property
+                <b><a href="#" class="underline-hover">here</a></b> if you own
+                one.
+              </p>
+            </div>
+          </div>
+          <div class="search-form">
+            <div class="row">
+              <div class="col-md-3 col-12 mb-3 mb-md-0 p-0">
+                <div class="search-input bg-white rounded-5 p-0">
+                  <select
+                    class="select"
+                    data-mdb-clear-button="true"
+                    name="category"
+                    id="category"
+                  >
+                    <option value="none" selected disabled>Price Range</option>
+                    <option value="none">&lt; 2000</option>
+                    <option value="none">2000-3500</option>
+                    <option value="none">3500-5000</option>
+                    <option value="none">&gt; 5000</option>
+                  </select>
+                  <label for="category">
+                    <i class="fas fa-dollar-sign trailing"></i>
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-12 mb-3 mb-md-0 p-0">
+                <div class="search-input bg-white rounded-5 p-0 ms-md-2 ms-0">
+                  <select
+                    class="select"
+                    data-mdb-clear-button="true"
+                    data-mdb-filter="true"
+                    name="location"
+                    id="location"
+                  >
+                    <option value="none" selected disabled>Locations</option>
+                    <option value="1">Tallital</option>
+                    <option value="2">Mallital</option>
+                    <option value="3">Nainital</option>
+                    <option value="4">Naukutchiyatal</option>
+                    <option value="5">Sattal</option>
+                    <option value="6">Mehragaon</option>
+                    <option value="7">Haldwani</option>
+                    <option value="8">Dehradun</option>
+                  </select>
+                  <label for="location"
+                    ><i class="fas fa-map-marker-alt"></i
+                  ></label>
+                </div>
+              </div>
+              <div class="col-md-4 col-12 mb-3 mb-md-0 p-0">
+                <div
+                  class="search-input p-0 ms-md-2 rounded-5 p-0 ms-md-2 ms-0 me-md-2 me-0"
+                >
+                  <label for="keyword"><i class="fas fa-search"></i></label>
+                  <input
+                    type="text"
+                    name="keyword"
+                    id="keyword"
+                    placeholder="PG name (optional)"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2 col-12 rounded-5 p-0">
+                <div class="search-btn button">
+                  <button class="btn m-0">
+                    <i class="fas fa-search"></i> Search
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="bg-image vh-100" id="homeCarousel">
+  <video playsinline autoplay muted loop>
+    <source
+      src="{% static '/vid/160522_054_Detroit_Downtownlongshot19_1080p.mp4' %}"
+      type="video/mp4"
+    />
+  </video>
+  <div class="mask carousel-mask"></div>
+</div>
+
+<section class="recentPost">
+  <div class="container">
+    <div class="recentPostInner">
+      <div class="row">
+        <div class="col-12 p-0">
+          <div class="recentPostSlider">
+            <a href="category.html" class="singlePost">
+              <div class="icon">
+                <img src="{% static '/img/girlPortrait.jpg' %}" alt="#" />
+              </div>
+              <h3>Asdfghij K | 21 | <i class="fas fa-venus me-1"></i></h3>
+              <h4>
+                <span> <i class="fas fa-map-marker-alt"></i></span>
+                bhimtal, uttarakhand
+              </h4>
+              <h5 class="description">
+                hii ! I am asdfghij, looking for a roommate ...more
+              </h5>
+            </a>
+
+            <a href="category.html" class="singlePost">
+              <div class="icon">
+                <img src="{% static '/img/girlPortrait.jpg' %}" alt="#" />
+              </div>
+              <h3>Asdfghij K | 21 | <i class="fas fa-venus me-1"></i></h3>
+              <h4>
+                <span> <i class="fas fa-map-marker-alt"></i></span>
+                bhimtal, uttarakhand
+              </h4>
+              <h5 class="description">
+                hii ! I am asdfghij, looking for a roommate ...more
+              </h5>
+            </a>
+
+            <a href="category.html" class="singlePost">
+              <div class="icon">
+                <img src="{% static '/img/girlPortrait.jpg' %}" alt="#" />
+              </div>
+              <h3>Asdfghij K | 21 | <i class="fas fa-venus me-1"></i></h3>
+              <h4>
+                <span> <i class="fas fa-map-marker-alt"></i></span>
+                bhimtal, uttarakhand
+              </h4>
+              <h5 class="description">
+                hii ! I am asdfghij, looking for a roommate ...more
+              </h5>
+            </a>
+
+            <a href="category.html" class="singlePost">
+              <div class="icon">
+                <img src="{% static '/img/girlPortrait.jpg'%}" alt="#" />
+              </div>
+              <h3>Asdfghij K | 21 | <i class="fas fa-venus me-1"></i></h3>
+              <h4>
+                <span> <i class="fas fa-map-marker-alt"></i></span>
+                bhimtal, uttarakhand
+              </h4>
+              <h5 class="description">
+                hii ! I am asdfghij, looking for a roommate ...more
+              </h5>
+            </a>
+
+            <a href="category.html" class="singlePost">
+              <div class="icon">
+                <img src="{% static '/img/girlPortrait.jpg' %}" alt="#" />
+              </div>
+              <h3>Asdfghij K | 21 | <i class="fas fa-venus me-1"></i></h3>
+              <h4>
+                <span> <i class="fas fa-map-marker-alt"></i></span>
+                bhimtal, uttarakhand
+              </h4>
+              <h5 class="description">
+                hii ! I am asdfghij, looking for a roommate ...more
+              </h5>
+            </a>
+
+            <a href="category.html" class="singlePost">
+              <div class="icon">
+                <img src="{% static '/img/girlPortrait.jpg' %}" alt="#" />
+              </div>
+              <h3>Asdfghij K | 21 | <i class="fas fa-venus me-1"></i></h3>
+              <h4>
+                <span> <i class="fas fa-map-marker-alt"></i></span>
+                bhimtal, uttarakhand
+              </h4>
+              <h5 class="description">
+                hii ! I am asdfghij, looking for a roommate ...more
+              </h5>
+            </a>
+
+            <a href="category.html" class="singlePost">
+              <div class="icon">
+                <img src="{% static '/img/girlPortrait.jpg' %}" alt="#" />
+              </div>
+              <h3>Asdfghij K | 21 | <i class="fas fa-venus me-1"></i></h3>
+              <h4>
+                <span> <i class="fas fa-map-marker-alt"></i></span>
+                bhimtal, uttarakhand
+              </h4>
+              <h5 class="description">
+                hii ! I am asdfghij, looking for a roommate ...more
+              </h5>
+            </a>
+
+            <a href="category.html" class="singlePost">
+              <div class="icon">
+                <img src="{% static '/img/girlPortrait.jpg' %}" alt="#" />
+              </div>
+              <h3>Asdfghij K | 21 | <i class="fas fa-venus me-1"></i></h3>
+              <h4>
+                <span> <i class="fas fa-map-marker-alt"></i></span>
+                bhimtal, uttarakhand
+              </h4>
+              <h5 class="description">
+                hii ! I am asdfghij, looking for a roommate ...more
+              </h5>
+            </a>
+
+            <a href="category.html" class="singlePost">
+              <div class="icon">
+                <img src="{% static '/img/girlPortrait.jpg' %}" alt="#" />
+              </div>
+              <h3>Asdfghij K | 21 | <i class="fas fa-venus me-1"></i></h3>
+              <h4>
+                <span> <i class="fas fa-map-marker-alt"></i></span>
+                bhimtal, uttarakhand
+              </h4>
+              <h5 class="description">
+                hii ! I am asdfghij, looking for a roommate ...more
+              </h5>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock heroArea %}
+
+{% block body %} 
+<section class="recentListing">
+  <div class="container">
+    <div class="row">
+      <div class="sectionTitle container">
+        <h2>Recent Listings</h2>
+        <h3>Check them Out</h3>
+      </div>
+      <div class="col-lg-12">
+        <div
+          id="listingCarousel"
+          class="carousel slide"
+          data-mdb-ride="carousel"
+        >
+          <div class="d-flex justify-content-center m-2 mb-3">
+            <button
+              class="carousel-control-prev btn btn-pink btn-floating mx-3"
+              type="button"
+              data-mdb-target="#listingCarousel"
+              data-mdb-slide="prev"
+            >
+              <i class="fas fa-angle-left fa-lg"></i>
+            </button>
+            <button
+              class="carousel-control-next btn btn-pink btn-floating mx-3"
+              type="button"
+              data-mdb-target="#listingCarousel"
+              data-mdb-slide="next"
+            >
+              <i class="fas fa-angle-right fa-lg"></i>
+            </button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card mt-2 mb-3 mb-md-4 listingCard">
+                <div class="row g-0">
+                  <div class="col-md-6 col-12 listingImage">
+                    <img
+                      src="{% static '/img/placeholder1080x864.png' %}"
+                      alt="Listing Image"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div class="card-body">
+                      <div class="starRating mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <a class="underline-hover" href="#">(18) reviews</a>
+                      </div>
+                      <div class="listingCardHead mb-3">
+                        <a href="#"
+                          ><h4 class="listingName mb-0">Bisht PG</h4></a
+                        >
+                        by:
+                        <a class="underline-hover" href="#">Bisht PGs</a>
+                        <span class="userVerified">
+                          <a
+                            href="#"
+                            type="button"
+                            data-mdb-toggle="tooltip"
+                            data-mdb-html="true"
+                            title="User Verified <br>Phone and Google"
+                            ><i class="fas fa-check-circle ms-2"></i
+                          ></a>
+                        </span>
+                      </div>
+                      <div class="listingType">
+                        <span
+                          type="button"
+                          data-mdb-toggle="tooltip"
+                          data-mdb-html="true"
+                          title="PG :  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, dignissimos? <hr>Rental: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, dignissimos?"
+                        >
+                          <i class="fas fa-check me-1"></i> PG
+                          <span class="ms-2">
+                            |
+                            <i class="fas fa-times ms-2 me-1"></i>
+                            Rental</span
+                          ></span
+                        >
+                      </div>
+                      <div class="listingCardAddress mb-3">
+                        <span>Private / Shared Rooms</span
+                        ><span>
+                          |
+                          <a class="underline-hover" href="#"
+                            ><i class="fas fa-map-marker-alt"></i> 263136,
+                            Bhimtal, Uttarakhand, IND</a
+                          ></span
+                        >
+                      </div>
+                      <div class="listingCardPrice mb-3">
+                        <span class="priceIcon"
+                          ><img src="{% static '/img/listing-icon-01.png' %}" alt=""
+                        /></span>
+                        <em>₹4500 - ₹95000</em> / Electricity Bill Separate
+                      </div>
+                      <ul class="listingCardInfo m-0 p-0">
+                        <li><i class="fas fa-bed me-2"></i> 4 Rooms</li>
+                        <li>
+                          <i class="fas fa-mars"></i>/<i
+                            class="fas fa-venus me-1"
+                          ></i>
+                          Open for Both
+                        </li>
+                        <li>
+                          <i class="fas fa-info-circle me-2"></i> 24x7 WiFi,
+                          Study Table, 5 min walk from GEHU
+                        </li>
+                      </ul>
+                      <a
+                        class="btn btn-outline-primary listingContact mt-2"
+                        href="#"
+                        ><i class="fas fa-eye me-2"></i> Contact Now</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mt-2 mt-md-3 mb-3 listingCard">
+                <div class="row g-0">
+                  <div class="col-md-6 col-12 listingImage">
+                    <img
+                      src="{% static '/img/placeholder1080x864.png' %}"
+                      alt="Listing Image"
+                      class="img-fluid rounded-start"
+                    />
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div class="card-body">
+                      <div class="starRating mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <a class="underline-hover" href="#">(18) reviews</a>
+                      </div>
+                      <div class="listingCardHead mb-3">
+                        <a href="#"
+                          ><h4 class="listingName mb-0">Bisht PG</h4></a
+                        >
+                        by:
+                        <a class="underline-hover" href="#">Bisht PGs</a>
+                        <span class="userVerified">
+                          <a
+                            href="#"
+                            type="button"
+                            data-mdb-toggle="tooltip"
+                            data-mdb-html="true"
+                            title="User Verified <br>Phone and Google</b>"
+                            ><i class="fas fa-check-circle ms-2"></i
+                          ></a>
+                        </span>
+                      </div>
+                      <div class="listingType">
+                        <a
+                          href="#"
+                          type="button"
+                          data-mdb-toggle="tooltip"
+                          data-mdb-html="true"
+                          title="PG :  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, dignissimos? <hr>Rental: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, dignissimos?"
+                        >
+                          <i class="fas fa-check me-1"></i> PG
+                          <span class="ms-2">
+                            |
+                            <i class="fas fa-times ms-2 me-1"></i>
+                            Rental</span
+                          ></a
+                        >
+                      </div>
+                      <div class="listingCardAddress mb-3">
+                        <span>Private / Shared Rooms</span
+                        ><span>
+                          |
+                          <a class="underline-hover" href="#"
+                            ><i class="fas fa-map-marker-alt"></i> 263136,
+                            Bhimtal, Uttarakhand, IND</a
+                          ></span
+                        >
+                      </div>
+                      <div class="listingCardPrice mb-3">
+                        <span class="priceIcon"
+                          ><img src="{% static '/img/listing-icon-01.png' %}" alt=""
+                        /></span>
+                        <em>₹4500 - ₹95000</em> / Electricity Bill Separate
+                      </div>
+                      <ul class="listingCardInfo m-0 p-0">
+                        <li><i class="fas fa-bed me-2"></i> 4 Rooms</li>
+                        <li>
+                          <i class="fas fa-mars"></i>/<i
+                            class="fas fa-venus me-1"
+                          ></i>
+                          Open for Both
+                        </li>
+                        <li>
+                          <i class="fas fa-info-circle me-2"></i> 24x7 WiFi,
+                          Study Table, 5 min walk from GEHU
+                        </li>
+                      </ul>
+                      <a
+                        class="btn btn-outline-primary listingContact mt-2"
+                        href="#"
+                        ><i class="fas fa-eye me-2"></i> Contact Now</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mt-2 mt-md-3 mb-3 listingCard">
+                <div class="row g-0">
+                  <div class="col-md-6 col-12 listingImage">
+                    <img
+                      src="{% static '/img/placeholder1080x864.png' %}"
+                      alt="Listing Image"
+                      class="img-fluid rounded-start"
+                    />
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div class="card-body">
+                      <div class="starRating mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <a class="underline-hover" href="#">(18) reviews</a>
+                      </div>
+                      <div class="listingCardHead mb-3">
+                        <a href="#"
+                          ><h4 class="listingName mb-0">Bisht PG</h4></a
+                        >
+                        by:
+                        <a class="underline-hover" href="#">Bisht PGs</a>
+                        <span class="userVerified">
+                          <a
+                            href="#"
+                            type="button"
+                            data-mdb-toggle="tooltip"
+                            data-mdb-html="true"
+                            title="User Verified <br>Phone and Google</b>"
+                            ><i class="fas fa-check-circle ms-2"></i
+                          ></a>
+                        </span>
+                      </div>
+                      <div class="listingType">
+                        <a
+                          href="#"
+                          type="button"
+                          data-mdb-toggle="tooltip"
+                          data-mdb-html="true"
+                          title="PG :  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, dignissimos? <hr>Rental: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, dignissimos?"
+                        >
+                          <i class="fas fa-check me-1"></i> PG
+                          <span class="ms-2">
+                            |
+                            <i class="fas fa-times ms-2 me-1"></i>
+                            Rental</span
+                          ></a
+                        >
+                      </div>
+                      <div class="listingCardAddress mb-3">
+                        <span>Private / Shared Rooms</span
+                        ><span>
+                          |
+                          <a class="underline-hover" href="#"
+                            ><i class="fas fa-map-marker-alt"></i> 263136,
+                            Bhimtal, Uttarakhand, IND</a
+                          ></span
+                        >
+                      </div>
+                      <div class="listingCardPrice mb-3">
+                        <span class="priceIcon"
+                          ><img src="{% static '/img/listing-icon-01.png' %}" alt=""
+                        /></span>
+                        <em>₹4500 - ₹95000</em> / Electricity Bill Separate
+                      </div>
+                      <ul class="listingCardInfo m-0 p-0">
+                        <li><i class="fas fa-bed me-2"></i> 4 Rooms</li>
+                        <li>
+                          <i class="fas fa-mars"></i>/<i
+                            class="fas fa-venus me-1"
+                          ></i>
+                          Open for Both
+                        </li>
+                        <li>
+                          <i class="fas fa-info-circle me-2"></i> 24x7 WiFi,
+                          Study Table, 5 min walk from GEHU
+                        </li>
+                      </ul>
+                      <a
+                        class="btn btn-outline-primary listingContact mt-2"
+                        href="#"
+                        ><i class="fas fa-eye me-2"></i> Contact Now</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card mt-2 mt-md-3 mb-3 listingCard">
+                <div class="row g-0">
+                  <div class="col-md-6 col-12 listingImage">
+                    <img
+                      src="{% static '/img/placeholder1080x864.png' %}"
+                      alt="Listing Image"
+                      class="img-fluid rounded-start"
+                    />
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div class="card-body">
+                      <div class="starRating mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <a class="underline-hover" href="#">(18) reviews</a>
+                      </div>
+                      <div class="listingCardHead mb-3">
+                        <a href="#"
+                          ><h4 class="listingName mb-0">Bisht PG</h4></a
+                        >
+                        by:
+                        <a class="underline-hover" href="#">Bisht PGs</a>
+                        <span class="userVerified">
+                          <a
+                            href="#"
+                            type="button"
+                            data-mdb-toggle="tooltip"
+                            data-mdb-html="true"
+                            title="User Verified <br>Phone and Google</b>"
+                            ><i class="fas fa-check-circle ms-2"></i
+                          ></a>
+                        </span>
+                      </div>
+                      <div class="listingType">
+                        <a
+                          href="#"
+                          type="button"
+                          data-mdb-toggle="tooltip"
+                          data-mdb-html="true"
+                          title="PG :  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, dignissimos? <hr>Rental: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, dignissimos?"
+                        >
+                          <i class="fas fa-check me-1"></i> PG
+                          <span class="ms-2">
+                            |
+                            <i class="fas fa-times ms-2 me-1"></i>
+                            Rental</span
+                          ></a
+                        >
+                      </div>
+                      <div class="listingCardAddress mb-3">
+                        <span>Private / Shared Rooms</span
+                        ><span>
+                          |
+                          <a class="underline-hover" href="#"
+                            ><i class="fas fa-map-marker-alt"></i> 263136,
+                            Bhimtal, Uttarakhand, IND</a
+                          ></span
+                        >
+                      </div>
+                      <div class="listingCardPrice mb-3">
+                        <span class="priceIcon"
+                          ><img src="{% static '/img/listing-icon-01.png' %}" alt=""
+                        /></span>
+                        <em>₹4500 - ₹95000</em> / Electricity Bill Separate
+                      </div>
+                      <ul class="listingCardInfo m-0 p-0">
+                        <li><i class="fas fa-bed me-2"></i> 4 Rooms</li>
+                        <li>
+                          <i class="fas fa-mars"></i>/<i
+                            class="fas fa-venus me-1"
+                          ></i>
+                          Open for Both
+                        </li>
+                        <li>
+                          <i class="fas fa-info-circle me-2"></i> 24x7 WiFi,
+                          Study Table, 5 min walk from GEHU
+                        </li>
+                      </ul>
+                      <a
+                        class="btn btn-outline-primary listingContact mt-2"
+                        href="#"
+                        ><i class="fas fa-eye me-2"></i> Contact Now</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mt-2 mt-md-3 mb-3 listingCard">
+                <div class="row g-0">
+                  <div class="col-md-6 col-12 listingImage">
+                    <img
+                      src="{% static '/img/placeholder1080x864.png' %}"
+                      alt="Listing Image"
+                      class="img-fluid rounded-start"
+                    />
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div class="card-body">
+                      <div class="starRating mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <a class="underline-hover" href="#">(18) reviews</a>
+                      </div>
+                      <div class="listingCardHead mb-3">
+                        <a href="#"
+                          ><h4 class="listingName mb-0">Bisht PG</h4></a
+                        >
+                        by:
+                        <a class="underline-hover" href="#">Bisht PGs</a>
+                        <span class="userVerified">
+                          <a
+                            href="#"
+                            type="button"
+                            data-mdb-toggle="tooltip"
+                            data-mdb-html="true"
+                            title="User Verified <br>Phone and Google</b>"
+                            ><i class="fas fa-check-circle ms-2"></i
+                          ></a>
+                        </span>
+                      </div>
+                      <div class="listingType">
+                        <a
+                          href="#"
+                          type="button"
+                          data-mdb-toggle="tooltip"
+                          data-mdb-html="true"
+                          title="PG :  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, dignissimos? <hr>Rental: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, dignissimos?"
+                        >
+                          <i class="fas fa-check me-1"></i> PG
+                          <span class="ms-2">
+                            |
+                            <i class="fas fa-times ms-2 me-1"></i>
+                            Rental</span
+                          ></a
+                        >
+                      </div>
+                      <div class="listingCardAddress mb-3">
+                        <span>Private / Shared Rooms</span
+                        ><span>
+                          |
+                          <a class="underline-hover" href="#"
+                            ><i class="fas fa-map-marker-alt"></i> 263136,
+                            Bhimtal, Uttarakhand, IND</a
+                          ></span
+                        >
+                      </div>
+                      <div class="listingCardPrice mb-3">
+                        <span class="priceIcon"
+                          ><img src="{% static '/img/listing-icon-01.png' %}" alt=""
+                        /></span>
+                        <em>₹4500 - ₹95000</em> / Electricity Bill Separate
+                      </div>
+                      <ul class="listingCardInfo m-0 p-0">
+                        <li><i class="fas fa-bed me-2"></i> 4 Rooms</li>
+                        <li>
+                          <i class="fas fa-mars"></i>/<i
+                            class="fas fa-venus me-1"
+                          ></i>
+                          Open for Both
+                        </li>
+                        <li>
+                          <i class="fas fa-info-circle me-2"></i> 24x7 WiFi,
+                          Study Table, 5 min walk from GEHU
+                        </li>
+                      </ul>
+                      <a
+                        class="btn btn-outline-primary listingContact mt-2"
+                        href="#"
+                        ><i class="fas fa-eye me-2"></i> Contact Now</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mt-2 mt-md-3 mb-3 listingCard">
+                <div class="row g-0">
+                  <div class="col-md-6 col-12 listingImage">
+                    <img
+                      src="{% static '/img/placeholder1080x864.png' %}"
+                      alt="Listing Image"
+                      class="img-fluid rounded-start"
+                    />
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div class="card-body">
+                      <div class="starRating mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <a class="underline-hover" href="#">(18) reviews</a>
+                      </div>
+                      <div class="listingCardHead mb-3">
+                        <a href="#"
+                          ><h4 class="listingName mb-0">Bisht PG</h4></a
+                        >
+                        by:
+                        <a class="underline-hover" href="#">Bisht PGs</a>
+                        <span class="userVerified">
+                          <a
+                            href="#"
+                            type="button"
+                            data-mdb-toggle="tooltip"
+                            data-mdb-html="true"
+                            title="User Verified <br>Phone and Google</b>"
+                            ><i class="fas fa-check-circle ms-2"></i
+                          ></a>
+                        </span>
+                      </div>
+                      <div class="listingType">
+                        <a
+                          href="#"
+                          type="button"
+                          data-mdb-toggle="tooltip"
+                          data-mdb-html="true"
+                          title="PG :  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, dignissimos? <hr>Rental: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, dignissimos?"
+                        >
+                          <i class="fas fa-check me-1"></i> PG
+                          <span class="ms-2">
+                            |
+                            <i class="fas fa-times ms-2 me-1"></i>
+                            Rental</span
+                          ></a
+                        >
+                      </div>
+                      <div class="listingCardAddress mb-3">
+                        <span>Private / Shared Rooms</span
+                        ><span>
+                          |
+                          <a class="underline-hover" href="#"
+                            ><i class="fas fa-map-marker-alt"></i> 263136,
+                            Bhimtal, Uttarakhand, IND</a
+                          ></span
+                        >
+                      </div>
+                      <div class="listingCardPrice mb-3">
+                        <span class="priceIcon"
+                          ><img src="{% static '/img/listing-icon-01.png' %}" alt=""
+                        /></span>
+                        <em>₹4500 - ₹95000</em> / Electricity Bill Separate
+                      </div>
+                      <ul class="listingCardInfo m-0 p-0">
+                        <li><i class="fas fa-bed me-2"></i> 4 Rooms</li>
+                        <li>
+                          <i class="fas fa-mars"></i>/<i
+                            class="fas fa-venus me-1"
+                          ></i>
+                          Open for Both
+                        </li>
+                        <li>
+                          <i class="fas fa-info-circle me-2"></i> 24x7 WiFi,
+                          Study Table, 5 min walk from GEHU
+                        </li>
+                      </ul>
+                      <a
+                        class="btn btn-outline-primary listingContact mt-2"
+                        href="#"
+                        ><i class="fas fa-eye me-2"></i> Contact Now</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-indicators listingCarouselIndicators">
+            <button
+              type="button"
+              data-mdb-target="#listingCarousel"
+              data-mdb-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-mdb-target="#listingCarousel"
+              data-mdb-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="callAction overlay">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-12 text-center">
+        <h1>Do you own a Property ?</h1>
+        <p>Post your AD for <em>FREE</em> on <em>RoomWatcher</em></p>
+        <button class="btn btn-lg mt-4">post an ad now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="popularPlaces mb-4">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="sectionTitle container mb-4">
+        <h2>Popular Cities</h2>
+      </div>
+
+      <div class="col-lg-2 col-4 cityImage">
+        <img src="{% static '/img/bhimtal_600x400.jpg' %}" alt="bhimtal lake" />
+        <span class="textOverlay"> Bhimtal </span>
+      </div>
+
+      <div class="col-lg-2 col-4 cityImage">
+        <img src="{% static '/img/haldwani_600x400.jpg' %}" alt="haldwani city" />
+        <span class="textOverlay"> Haldwani </span>
+      </div>
+
+      <div class="col-lg-2 col-4 cityImage">
+        <img src="{% static '/img/nainital_600x400.jpg' %}" alt="Nainital lake" />
+        <span class="textOverlay"> Nainital </span>
+      </div>
+
+      <div class="col-lg-2 col-4 cityImage">
+        <img src="{% static '/img/sattal_600x400.jpg' %}" alt="sattal lake" />
+        <span class="textOverlay"> Sattal </span>
+      </div>
+
+      <div class="col-lg-2 col-4 cityImage">
+        <img src="{% static '/img/naukutchiyatal_600x400.jpg' %}" alt="Naukutchiyatal lake" />
+        <span class="textOverlay"> Naukutchiyatal </span>
+      </div>
+
+      <div class="col-lg-2 col-4 cityImage">
+        <img src="{% static '/img/bhimtal-7126126.jpg' %}" alt="bhimtal lake" />
+        <span class="textOverlay"> Uttarakhand </span>
+      </div>
+    </div>
+    <div class="row placeList ps-3 ps-md-0">
+      <h2 class="mb-3 px-0">Places</h2>
+      <div
+        class="col-lg-3 col-md-4 col-6 mb-4 pe-2 pe-md-5 d-flex justify-content-between align-items-center border-start border-dark border-2 underline-hover"
+      >
+        <a href="#"> Naukutchiyatal </a>
+        <span class="badge badge-primary rounded-pill ms-1">14</span>
+      </div>
+      <div
+        class="col-lg-3 col-md-4 col-6 mb-4 pe-2 pe-md-5 d-flex justify-content-between align-items-center border-start border-dark border-2 underline-hover"
+      >
+        <a href="#"> A list item </a>
+        <span class="badge badge-primary rounded-pill ms-1">14</span>
+      </div>
+      <div
+        class="col-lg-3 col-md-4 col-6 mb-4 pe-2 pe-md-5 d-flex justify-content-between align-items-center border-start border-dark border-2 underline-hover"
+      >
+        <a href="#"> A list item </a>
+        <span class="badge badge-primary rounded-pill ms-1">14</span>
+      </div>
+      <div
+        class="col-lg-3 col-md-4 col-6 mb-4 pe-2 pe-md-5 d-flex justify-content-between align-items-center border-start border-dark border-2 underline-hover"
+      >
+        <a href="#"> A list item </a>
+        <span class="badge badge-primary rounded-pill ms-1">14</span>
+      </div>
+      <div
+        class="col-lg-3 col-md-4 col-6 mb-4 pe-2 pe-md-5 d-flex justify-content-between align-items-center border-start border-dark border-2 underline-hover"
+      >
+        <a href="#"> A list item </a>
+        <span class="badge badge-primary rounded-pill ms-1">14</span>
+      </div>
+      <div
+        class="col-lg-3 col-md-4 col-6 mb-4 pe-2 pe-md-5 d-flex justify-content-between align-items-center border-start border-dark border-2 underline-hover"
+      >
+        <a href="#"> A list item </a>
+        <span class="badge badge-primary rounded-pill ms-1">14</span>
+      </div>
+      <div
+        class="col-lg-3 col-md-4 col-6 mb-4 pe-2 pe-md-5 d-flex justify-content-between align-items-center border-start border-dark border-2 underline-hover"
+      >
+        <a href="#"> A list item </a>
+        <span class="badge badge-primary rounded-pill ms-1">14</span>
+      </div>
+      <div
+        class="col-lg-3 col-md-4 col-6 mb-4 pe-2 pe-md-5 d-flex justify-content-between align-items-center border-start border-dark border-2 underline-hover"
+      >
+        <a href="#"> A list item </a>
+        <span class="badge badge-primary rounded-pill ms-1">14</span>
+      </div>
+      <div
+        class="col-lg-3 col-md-4 col-6 mb-4 pe-2 pe-md-5 d-flex justify-content-between align-items-center border-start border-dark border-2 underline-hover"
+      >
+        <a href="#"> A list item </a>
+        <span class="badge badge-primary rounded-pill ms-1">14</span>
+      </div>
+      <div
+        class="col-lg-3 col-md-4 col-6 mb-4 pe-2 pe-md-5 d-flex justify-content-between align-items-center border-start border-dark border-2 underline-hover"
+      >
+        <a href="#"> A list item </a>
+        <span class="badge badge-primary rounded-pill ms-1">14</span>
+      </div>
+      <div
+        class="col-lg-3 col-md-4 col-6 mb-4 pe-2 pe-md-5 d-flex justify-content-between align-items-center border-start border-dark border-2 underline-hover"
+      >
+        <a href="#"> A list item </a>
+        <span class="badge badge-primary rounded-pill ms-1">14</span>
+      </div>
+      <div
+        class="col-lg-3 col-md-4 col-6 mb-4 pe-2 pe-md-5 d-flex justify-content-between align-items-center border-start border-dark border-2 underline-hover"
+      >
+        <a href="#"> A list item </a>
+        <span class="badge badge-primary rounded-pill ms-1">14</span>
+      </div>
+      <div
+        class="col-lg-3 col-md-4 col-6 mb-4 pe-2 pe-md-5 d-flex justify-content-between align-items-center border-start border-dark border-2 underline-hover"
+      >
+        <a href="#"> A list item </a>
+        <span class="badge badge-primary rounded-pill ms-1">14</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="callAction overlay">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-12 text-center">
+        <h1>Looking for a Roommate ?</h1>
+        <p>
+          Post your details <em> here </em> and Find your <em> Roomie </em>.
+        </p>
+        <button class="btn btn-lg mt-4">Make Profile</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock body %}

@@ -1,0 +1,376 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock title %} || ProductONE</title>
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static 'vendor/tinyslider/tiny-slider.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendor/mdb/css/mdb2.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'my.css'%}" />
+    {% block head %}{% endblock head %}
+  </head>
+
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <!-- Container wrapper -->
+        <div class="container-fluid p-1">
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="offcanvas"
+            data-mdb-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <i class="fas fa-bars text-dark"></i>
+          </button>
+
+          <!-- Collapsible wrapper -->
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Dark offcanvas
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-mdb-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <!-- Left links -->
+            <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+              <!-- Navbar brand -->
+              <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+                  height="15"
+                  alt="MDB Logo"
+                  loading="lazy"
+                />
+              </a>
+              <li class="nav-item dropdown hoverDropdown">
+                <a
+                  class="nav-link dropdown-toggle active"
+                  href="#"
+                  role="button"
+                  data-mdb-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Find Your Room
+                </a>
+                <ul class="dropdown-menu fade-down">
+                  <li><a class="dropdown-item" href="#">Isolated</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">With Roommate(s)</a>
+                  </li>
+                  <li>
+                    <hr />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Paying Guest</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">List Your Property</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Review Property</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Feedback for us</a>
+              </li>
+            </ul>
+            <!-- Left links -->
+          </div>
+          <!-- Right elements -->
+          <div class="d-flex align-items-center">
+            <!-- Icon -->
+            <a class="text-white" href="#" rel="nofollow" target="_blank">
+              <i class="fab fa-instagram scaleAnim"></i>
+            </a>
+            <a
+              class="text-white ms-3"
+              href="https://twitter.com/MDBootstrap"
+              rel="nofollow"
+              target="_blank"
+            >
+              <i class="fab fa-twitter scaleAnim"></i>
+            </a>
+            <!-- Notifications -->
+            <div class="hoverDropdown dropdown">
+              <a
+                class="text-white ms-3 dropdown-toggle hidden-arrow"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa fa-bell scaleAnim"></i>
+                <span class="badge rounded-pill badge-notification bg-primary"
+                  >1</span
+                >
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end fade-down"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <a class="dropdown-item" href="#">Some news</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Another news</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Avatar -->
+            <div class="hoverDropdown dropdown">
+              <a
+                class="dropdown-toggle d-flex align-items-center hidden-arrow ms-3 me-2 me-md-4"
+                href="#"
+                id="navbarDropdownMenuAvatar"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                  class="rounded-circle scaleAnim"
+                  height="25"
+                  alt="User Avatar"
+                  loading="lazy"
+                />
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end fade-down"
+                aria-labelledby="navbarDropdownMenuAvatar"
+              >
+                <li>
+                  <a class="dropdown-item" href="#">My profile</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Settings</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Right elements -->
+        </div>
+      </nav>
+      {% if messages %}  // use of if and for
+	      {% for message in messages %}
+	      <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+	        <strong>{{message}}</strong>//using the variable
+	        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	      </div>
+	      {% endfor %}
+	      {% endif %}
+
+
+      {% block heroArea %}{% endblock heroArea %}
+      
+    </header>
+
+    {% block body %} {% endblock body %}
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-dark text-white mt-5">
+      <!-- Section: Social media -->
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+          <!-- Facebook -->
+          <a
+            class="btn text-white btn-floating m-1"
+            style="background-color: #3b5998"
+            href="#!"
+            role="button"
+            ><i class="fab fa-facebook-f scaleAnim"></i
+          ></a>
+
+          <!-- Twitter -->
+          <a
+            class="btn text-white btn-floating m-1"
+            style="background-color: #55acee"
+            href="#!"
+            role="button"
+            ><i class="fab fa-twitter scaleAnim"></i
+          ></a>
+
+          <!-- Google -->
+          <a
+            class="btn text-white btn-floating m-1"
+            style="background-color: #dd4b39"
+            href="#!"
+            role="button"
+            ><i class="fab fa-google scaleAnim"></i
+          ></a>
+
+          <!-- Instagram -->
+          <a
+            class="btn text-white btn-floating m-1"
+            style="background-color: #ac2bac"
+            href="#!"
+            role="button"
+            ><i class="fab fa-instagram scaleAnim"></i
+          ></a>
+
+          <!-- Linkedin -->
+          <a
+            class="btn text-white btn-floating m-1"
+            style="background-color: #0082ca"
+            href="#!"
+            role="button"
+            ><i class="fab fa-linkedin-in scaleAnim"></i
+          ></a>
+          <!-- Github -->
+          <a
+            class="btn btn-floating m-1 text-dark"
+            style="background-color: #e6e3e3"
+            href="#!"
+            role="button"
+            ><i class="fab fa-github scaleAnim"></i
+          ></a>
+        </div>
+
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-2 text-secondary"></i>Find Your Room
+              </h6>
+              <p>Find the best Rooms, PG, Roommates and tenants.</p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Products</h6>
+              <p>
+                <a href="#!" class="text-reset underline-hover">FindYourRoom</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset underline-hover">Coming soon</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset underline-hover">Coming Soon</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset underline-hover">Coming Soon</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+              <p>
+                <a href="#!" class="text-reset underline-hover">Profile</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset underline-hover">Help Center</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset underline-hover">FAQ</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset underline-hover"
+                  >Privacy Policy</a
+                >
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p>
+                <i class="fas fa-home me-3 text-secondary"></i> Bhimtal, 263136,
+                Uttarakhand, India
+              </p>
+              <p>
+                <a href="mailto:info@findmyroom.com" class="text-white">
+                  <i class="fas fa-envelope me-3 text-secondary"></i>
+                  info@findmyroom.com
+                </a>
+              </p>
+              <p>
+                <i class="fas fa-phone me-3 text-secondary"></i> +91 63955 00000
+              </p>
+              <p><i class="fas fa-print me-3 text-secondary"></i> fax ni h</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.025)"
+      >
+        <a
+          class="text-reset fw-bold"
+          href="https://www.instagram.com/lalitdumka01/"
+          >Lalit Dumka</a
+        >
+        © 2023
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <script src="{% static '/vendor/tinyslider/tiny-slider.js'%}"></script>
+    <script src="{% static '/vendor/mdb/js/mdb2.min.js'%}"></script>
+    <script src="{% static '/my.js' %}"></script>
+  </body>
+</html>

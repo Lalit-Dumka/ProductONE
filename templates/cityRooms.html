@@ -1,0 +1,806 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block title %}Bhimtal{% endblock title %} 
+
+{% block body %}
+<!--Main layout-->
+<main>
+  <div class="container-fluid p-0">
+    <!--Section: Content-->
+    <section>
+      <!-- Jumbotron -->
+      <div class="p-5 text-center bg-light shadow-5 mb-0 intro overlay">
+        <div>
+          <h1 class="mb-1 h2">Bhimtal</h1>
+          <p class="mb-4">Find the <em>best</em> Rooms/PGs available.</p>
+          <a
+            class="btn btn-primary m-2"
+            href="#"
+            role="button"
+            rel="nofollow"
+            target="_blank"
+            >Add Your Property</a
+          >
+          <a class="btn btn-primary m-2" href="#" target="_blank" role="button"
+            >Check For Roommates</a
+          >
+        </div>
+      </div>
+      <!-- Jumbotron -->
+    </section>
+    <!--Section: Content-->
+
+    <nav class="navbar navbar-expand-lg pageBreadcrumb">
+      <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Cities</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              <a href="#">Bhimtal</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </nav>
+  </div>
+
+  <!--Section: Content-->
+  <div class="container">
+    <section>
+      <div class="subHeading">
+        <h2 class="mb-3"><strong>Rooms in Bhimtal</strong></h2>
+      </div>
+      <div class="btn-group mb-5 sortFilters">
+        <input
+          type="radio"
+          class="btn-check"
+          name="options"
+          id="option1"
+          autocomplete="off"
+          checked
+        />
+        <label class="btn btn-secondary border-end" for="option1"
+          >Latest First</label
+        >
+
+        <input
+          type="radio"
+          class="btn-check"
+          name="options"
+          id="option2"
+          autocomplete="off"
+        />
+        <label class="btn btn-secondary" for="option2">Price : Highest</label>
+
+        <input
+          type="radio"
+          class="btn-check"
+          name="options"
+          id="option3"
+          autocomplete="off"
+        />
+        <label class="btn btn-secondary" for="option3">Price : lowest</label>
+
+        <input
+          type="radio"
+          class="btn-check"
+          name="options"
+          id="option4"
+          autocomplete="off"
+        />
+        <label class="btn btn-secondary" for="option4">PG only</label>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-4 col-md-6 mb-5">
+          <div class="card shadow-4-strong">
+            <img
+            src="{% static '/img/haldwani_600x400.jpg'%}"
+              class="card-img-top"
+              alt="..."
+            />
+
+            <div class="card-body pb-2">
+              <p class="fw-bold text-muted small text-uppercase mb-1">
+                Bisht PG
+              </p>
+              <p class="fw-bold h1 mb-1">&#8377; 4500</p>
+              <!-- <p class="text-muted mb-0">This is small description... Lorem ipsum dolor sit amet consectetur.</p> -->
+
+              <button class="btn btn-outline-black mt-2">
+                <span><i class="fa fa-eye me-2"></i></span> Contact Now
+              </button>
+            </div>
+
+            <div
+              class="card-body d-flex justify-content-around pt-2 shadow-4-strong mt-2"
+            >
+              <span
+                ><i class="fas fa-bed me-2 text-muted"></i>
+                <strong class="me-1 text-muted">4 Room</strong></span
+              >
+
+              <span
+                ><i class="fas fa-star me-2 text-muted"></i>
+                <strong class="me-1 text-muted">5</strong></span
+              >
+              <span
+                ><i class="fas fa-female me-2 text-muted"></i>
+                <strong class="me-1 text-muted">For Girls</strong></span
+              >
+            </div>
+            <div class="card-body bg-light">
+              <p class="text-uppercase text-muted small fw-bold">Owner</p>
+              <div class="d-flex align-items-center">
+                <div class="flex-shrink-0">
+                  <img
+                    src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                    class="rounded-circle"
+                    alt=""
+                    style="width: 45px; height: 45px"
+                  />
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <p class="fw-bold mb-1">Sandra C Stuart</p>
+                  <p class="text-muted mb-0">+91 99966699966</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-6 mb-5">
+            <div class="card shadow-4-strong">
+              <img
+              src="{% static '/img/haldwani_600x400.jpg'%}"
+                class="card-img-top"
+                alt="..."
+              />
+  
+              <div class="card-body pb-2">
+                <p class="fw-bold text-muted small text-uppercase mb-1">
+                  Bisht PG
+                </p>
+                <p class="fw-bold h1 mb-1">&#8377; 4500</p>
+                <!-- <p class="text-muted mb-0">This is small description... Lorem ipsum dolor sit amet consectetur.</p> -->
+  
+                <button class="btn btn-outline-black mt-2">
+                  <span><i class="fa fa-eye me-2"></i></span> Contact Now
+                </button>
+              </div>
+  
+              <div
+                class="card-body d-flex justify-content-around pt-2 shadow-4-strong mt-2"
+              >
+                <span
+                  ><i class="fas fa-bed me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">4 Room</strong></span
+                >
+  
+                <span
+                  ><i class="fas fa-star me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">5</strong></span
+                >
+                <span
+                  ><i class="fas fa-female me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">For Girls</strong></span
+                >
+              </div>
+              <div class="card-body bg-light">
+                <p class="text-uppercase text-muted small fw-bold">Owner</p>
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                      class="rounded-circle"
+                      alt=""
+                      style="width: 45px; height: 45px"
+                    />
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <p class="fw-bold mb-1">Sandra C Stuart</p>
+                    <p class="text-muted mb-0">+91 99966699966</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 mb-5">
+            <div class="card shadow-4-strong">
+              <img
+              src="{% static '/img/haldwani_600x400.jpg'%}"
+                class="card-img-top"
+                alt="..."
+              />
+  
+              <div class="card-body pb-2">
+                <p class="fw-bold text-muted small text-uppercase mb-1">
+                  Bisht PG
+                </p>
+                <p class="fw-bold h1 mb-1">&#8377; 4500</p>
+                <!-- <p class="text-muted mb-0">This is small description... Lorem ipsum dolor sit amet consectetur.</p> -->
+  
+                <button class="btn btn-outline-black mt-2">
+                  <span><i class="fa fa-eye me-2"></i></span> Contact Now
+                </button>
+              </div>
+  
+              <div
+                class="card-body d-flex justify-content-around pt-2 shadow-4-strong mt-2"
+              >
+                <span
+                  ><i class="fas fa-bed me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">4 Room</strong></span
+                >
+  
+                <span
+                  ><i class="fas fa-star me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">5</strong></span
+                >
+                <span
+                  ><i class="fas fa-female me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">For Girls</strong></span
+                >
+              </div>
+              <div class="card-body bg-light">
+                <p class="text-uppercase text-muted small fw-bold">Owner</p>
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                      class="rounded-circle"
+                      alt=""
+                      style="width: 45px; height: 45px"
+                    />
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <p class="fw-bold mb-1">Sandra C Stuart</p>
+                    <p class="text-muted mb-0">+91 99966699966</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 mb-5">
+            <div class="card shadow-4-strong">
+              <img
+              src="{% static '/img/haldwani_600x400.jpg'%}"
+                class="card-img-top"
+                alt="..."
+              />
+  
+              <div class="card-body pb-2">
+                <p class="fw-bold text-muted small text-uppercase mb-1">
+                  Bisht PG
+                </p>
+                <p class="fw-bold h1 mb-1">&#8377; 4500</p>
+                <!-- <p class="text-muted mb-0">This is small description... Lorem ipsum dolor sit amet consectetur.</p> -->
+  
+                <button class="btn btn-outline-black mt-2">
+                  <span><i class="fa fa-eye me-2"></i></span> Contact Now
+                </button>
+              </div>
+  
+              <div
+                class="card-body d-flex justify-content-around pt-2 shadow-4-strong mt-2"
+              >
+                <span
+                  ><i class="fas fa-bed me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">4 Room</strong></span
+                >
+  
+                <span
+                  ><i class="fas fa-star me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">5</strong></span
+                >
+                <span
+                  ><i class="fas fa-female me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">For Girls</strong></span
+                >
+              </div>
+              <div class="card-body bg-light">
+                <p class="text-uppercase text-muted small fw-bold">Owner</p>
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                      class="rounded-circle"
+                      alt=""
+                      style="width: 45px; height: 45px"
+                    />
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <p class="fw-bold mb-1">Sandra C Stuart</p>
+                    <p class="text-muted mb-0">+91 99966699966</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 mb-5">
+            <div class="card shadow-4-strong">
+              <img
+              src="{% static '/img/haldwani_600x400.jpg'%}"
+                class="card-img-top"
+                alt="..."
+              />
+  
+              <div class="card-body pb-2">
+                <p class="fw-bold text-muted small text-uppercase mb-1">
+                  Bisht PG
+                </p>
+                <p class="fw-bold h1 mb-1">&#8377; 4500</p>
+                <!-- <p class="text-muted mb-0">This is small description... Lorem ipsum dolor sit amet consectetur.</p> -->
+  
+                <button class="btn btn-outline-black mt-2">
+                  <span><i class="fa fa-eye me-2"></i></span> Contact Now
+                </button>
+              </div>
+  
+              <div
+                class="card-body d-flex justify-content-around pt-2 shadow-4-strong mt-2"
+              >
+                <span
+                  ><i class="fas fa-bed me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">4 Room</strong></span
+                >
+  
+                <span
+                  ><i class="fas fa-star me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">5</strong></span
+                >
+                <span
+                  ><i class="fas fa-female me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">For Girls</strong></span
+                >
+              </div>
+              <div class="card-body bg-light">
+                <p class="text-uppercase text-muted small fw-bold">Owner</p>
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                      class="rounded-circle"
+                      alt=""
+                      style="width: 45px; height: 45px"
+                    />
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <p class="fw-bold mb-1">Sandra C Stuart</p>
+                    <p class="text-muted mb-0">+91 99966699966</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 mb-5">
+            <div class="card shadow-4-strong">
+              <img
+              src="{% static '/img/haldwani_600x400.jpg'%}"
+                class="card-img-top"
+                alt="..."
+              />
+  
+              <div class="card-body pb-2">
+                <p class="fw-bold text-muted small text-uppercase mb-1">
+                  Bisht PG
+                </p>
+                <p class="fw-bold h1 mb-1">&#8377; 4500</p>
+                <!-- <p class="text-muted mb-0">This is small description... Lorem ipsum dolor sit amet consectetur.</p> -->
+  
+                <button class="btn btn-outline-black mt-2">
+                  <span><i class="fa fa-eye me-2"></i></span> Contact Now
+                </button>
+              </div>
+  
+              <div
+                class="card-body d-flex justify-content-around pt-2 shadow-4-strong mt-2"
+              >
+                <span
+                  ><i class="fas fa-bed me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">4 Room</strong></span
+                >
+  
+                <span
+                  ><i class="fas fa-star me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">5</strong></span
+                >
+                <span
+                  ><i class="fas fa-female me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">For Girls</strong></span
+                >
+              </div>
+              <div class="card-body bg-light">
+                <p class="text-uppercase text-muted small fw-bold">Owner</p>
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                      class="rounded-circle"
+                      alt=""
+                      style="width: 45px; height: 45px"
+                    />
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <p class="fw-bold mb-1">Sandra C Stuart</p>
+                    <p class="text-muted mb-0">+91 99966699966</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 mb-5">
+            <div class="card shadow-4-strong">
+              <img
+              src="{% static '/img/haldwani_600x400.jpg'%}"
+                class="card-img-top"
+                alt="..."
+              />
+  
+              <div class="card-body pb-2">
+                <p class="fw-bold text-muted small text-uppercase mb-1">
+                  Bisht PG
+                </p>
+                <p class="fw-bold h1 mb-1">&#8377; 4500</p>
+                <!-- <p class="text-muted mb-0">This is small description... Lorem ipsum dolor sit amet consectetur.</p> -->
+  
+                <button class="btn btn-outline-black mt-2">
+                  <span><i class="fa fa-eye me-2"></i></span> Contact Now
+                </button>
+              </div>
+  
+              <div
+                class="card-body d-flex justify-content-around pt-2 shadow-4-strong mt-2"
+              >
+                <span
+                  ><i class="fas fa-bed me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">4 Room</strong></span
+                >
+  
+                <span
+                  ><i class="fas fa-star me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">5</strong></span
+                >
+                <span
+                  ><i class="fas fa-female me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">For Girls</strong></span
+                >
+              </div>
+              <div class="card-body bg-light">
+                <p class="text-uppercase text-muted small fw-bold">Owner</p>
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                      class="rounded-circle"
+                      alt=""
+                      style="width: 45px; height: 45px"
+                    />
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <p class="fw-bold mb-1">Sandra C Stuart</p>
+                    <p class="text-muted mb-0">+91 99966699966</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 mb-5">
+            <div class="card shadow-4-strong">
+              <img
+              src="{% static '/img/haldwani_600x400.jpg'%}"
+                class="card-img-top"
+                alt="..."
+              />
+  
+              <div class="card-body pb-2">
+                <p class="fw-bold text-muted small text-uppercase mb-1">
+                  Bisht PG
+                </p>
+                <p class="fw-bold h1 mb-1">&#8377; 4500</p>
+                <!-- <p class="text-muted mb-0">This is small description... Lorem ipsum dolor sit amet consectetur.</p> -->
+  
+                <button class="btn btn-outline-black mt-2">
+                  <span><i class="fa fa-eye me-2"></i></span> Contact Now
+                </button>
+              </div>
+  
+              <div
+                class="card-body d-flex justify-content-around pt-2 shadow-4-strong mt-2"
+              >
+                <span
+                  ><i class="fas fa-bed me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">4 Room</strong></span
+                >
+  
+                <span
+                  ><i class="fas fa-star me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">5</strong></span
+                >
+                <span
+                  ><i class="fas fa-female me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">For Girls</strong></span
+                >
+              </div>
+              <div class="card-body bg-light">
+                <p class="text-uppercase text-muted small fw-bold">Owner</p>
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                      class="rounded-circle"
+                      alt=""
+                      style="width: 45px; height: 45px"
+                    />
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <p class="fw-bold mb-1">Sandra C Stuart</p>
+                    <p class="text-muted mb-0">+91 99966699966</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 mb-5">
+            <div class="card shadow-4-strong">
+              <img
+              src="{% static '/img/haldwani_600x400.jpg'%}"
+                class="card-img-top"
+                alt="..."
+              />
+  
+              <div class="card-body pb-2">
+                <p class="fw-bold text-muted small text-uppercase mb-1">
+                  Bisht PG
+                </p>
+                <p class="fw-bold h1 mb-1">&#8377; 4500</p>
+                <!-- <p class="text-muted mb-0">This is small description... Lorem ipsum dolor sit amet consectetur.</p> -->
+  
+                <button class="btn btn-outline-black mt-2">
+                  <span><i class="fa fa-eye me-2"></i></span> Contact Now
+                </button>
+              </div>
+  
+              <div
+                class="card-body d-flex justify-content-around pt-2 shadow-4-strong mt-2"
+              >
+                <span
+                  ><i class="fas fa-bed me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">4 Room</strong></span
+                >
+  
+                <span
+                  ><i class="fas fa-star me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">5</strong></span
+                >
+                <span
+                  ><i class="fas fa-female me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">For Girls</strong></span
+                >
+              </div>
+              <div class="card-body bg-light">
+                <p class="text-uppercase text-muted small fw-bold">Owner</p>
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                      class="rounded-circle"
+                      alt=""
+                      style="width: 45px; height: 45px"
+                    />
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <p class="fw-bold mb-1">Sandra C Stuart</p>
+                    <p class="text-muted mb-0">+91 99966699966</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 mb-5">
+            <div class="card shadow-4-strong">
+              <img
+              src="{% static '/img/haldwani_600x400.jpg'%}"
+                class="card-img-top"
+                alt="..."
+              />
+  
+              <div class="card-body pb-2">
+                <p class="fw-bold text-muted small text-uppercase mb-1">
+                  Bisht PG
+                </p>
+                <p class="fw-bold h1 mb-1">&#8377; 4500</p>
+                <!-- <p class="text-muted mb-0">This is small description... Lorem ipsum dolor sit amet consectetur.</p> -->
+  
+                <button class="btn btn-outline-black mt-2">
+                  <span><i class="fa fa-eye me-2"></i></span> Contact Now
+                </button>
+              </div>
+  
+              <div
+                class="card-body d-flex justify-content-around pt-2 shadow-4-strong mt-2"
+              >
+                <span
+                  ><i class="fas fa-bed me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">4 Room</strong></span
+                >
+  
+                <span
+                  ><i class="fas fa-star me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">5</strong></span
+                >
+                <span
+                  ><i class="fas fa-female me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">For Girls</strong></span
+                >
+              </div>
+              <div class="card-body bg-light">
+                <p class="text-uppercase text-muted small fw-bold">Owner</p>
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                      class="rounded-circle"
+                      alt=""
+                      style="width: 45px; height: 45px"
+                    />
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <p class="fw-bold mb-1">Sandra C Stuart</p>
+                    <p class="text-muted mb-0">+91 99966699966</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 mb-5">
+            <div class="card shadow-4-strong">
+              <img
+              src="{% static '/img/haldwani_600x400.jpg'%}"
+                class="card-img-top"
+                alt="..."
+              />
+  
+              <div class="card-body pb-2">
+                <p class="fw-bold text-muted small text-uppercase mb-1">
+                  Bisht PG
+                </p>
+                <p class="fw-bold h1 mb-1">&#8377; 4500</p>
+                <!-- <p class="text-muted mb-0">This is small description... Lorem ipsum dolor sit amet consectetur.</p> -->
+  
+                <button class="btn btn-outline-black mt-2">
+                  <span><i class="fa fa-eye me-2"></i></span> Contact Now
+                </button>
+              </div>
+  
+              <div
+                class="card-body d-flex justify-content-around pt-2 shadow-4-strong mt-2"
+              >
+                <span
+                  ><i class="fas fa-bed me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">4 Room</strong></span
+                >
+  
+                <span
+                  ><i class="fas fa-star me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">5</strong></span
+                >
+                <span
+                  ><i class="fas fa-female me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">For Girls</strong></span
+                >
+              </div>
+              <div class="card-body bg-light">
+                <p class="text-uppercase text-muted small fw-bold">Owner</p>
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                      class="rounded-circle"
+                      alt=""
+                      style="width: 45px; height: 45px"
+                    />
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <p class="fw-bold mb-1">Sandra C Stuart</p>
+                    <p class="text-muted mb-0">+91 99966699966</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 mb-5">
+            <div class="card shadow-4-strong">
+              <img
+              src="{% static '/img/haldwani_600x400.jpg'%}"
+                class="card-img-top"
+                alt="..."
+              />
+  
+              <div class="card-body pb-2">
+                <p class="fw-bold text-muted small text-uppercase mb-1">
+                  Bisht PG
+                </p>
+                <p class="fw-bold h1 mb-1">&#8377; 4500</p>
+                <!-- <p class="text-muted mb-0">This is small description... Lorem ipsum dolor sit amet consectetur.</p> -->
+  
+                <button class="btn btn-outline-black mt-2">
+                  <span><i class="fa fa-eye me-2"></i></span> Contact Now
+                </button>
+              </div>
+  
+              <div
+                class="card-body d-flex justify-content-around pt-2 shadow-4-strong mt-2"
+              >
+                <span
+                  ><i class="fas fa-bed me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">4 Room</strong></span
+                >
+  
+                <span
+                  ><i class="fas fa-star me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">5</strong></span
+                >
+                <span
+                  ><i class="fas fa-female me-2 text-muted"></i>
+                  <strong class="me-1 text-muted">For Girls</strong></span
+                >
+              </div>
+              <div class="card-body bg-light">
+                <p class="text-uppercase text-muted small fw-bold">Owner</p>
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                      class="rounded-circle"
+                      alt=""
+                      style="width: 45px; height: 45px"
+                    />
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <p class="fw-bold mb-1">Sandra C Stuart</p>
+                    <p class="text-muted mb-0">+91 99966699966</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+  </div>
+  <!--Section: Content-->
+
+  <!-- Pagination -->
+  <nav class="my-4" aria-label="...">
+    <ul class="pagination pagination-circle justify-content-center">
+      <li class="page-item">
+        <a class="page-link" href="#" tabindex="-1" aria-disabled="true"
+          >Previous</a
+        >
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active" aria-current="page">
+        <a class="page-link" href="#"
+          >2 <span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+</main>
+<!--Main layout-->
+{% endblock body %}
