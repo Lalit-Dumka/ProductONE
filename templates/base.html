@@ -185,14 +185,14 @@
           <!-- Right elements -->
         </div>
       </nav>
-      {% if messages %}  // use of if and for
+      {% if messages %}  
 	      {% for message in messages %}
-	      <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
-	        <strong>{{message}}</strong>//using the variable
-	        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	      <div class="alert alert-{{message.tags}} fade show " role="alert" data-mdb-position="top-right" data-mdb-autohide="true" data-mdb-delay="4000" style="z-index: 100; margin-top: 70px;">
+	        <strong>{{message}}</strong>
+	        <button type="button" class="btn-close" data-mdb-dismiss="alert" aria-label="Close"></button>
 	      </div>
 	      {% endfor %}
-	      {% endif %}
+	    {% endif %}
 
 
       {% block heroArea %}{% endblock heroArea %}
