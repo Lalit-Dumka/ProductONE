@@ -115,6 +115,10 @@ body {
   box-shadow: 0 0 20px #fefefe;
 }
 
+#loginBtn:hover{
+  background-color: #081828 !important;
+}
+
 /* @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 * {
