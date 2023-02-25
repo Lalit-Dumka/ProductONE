@@ -7,112 +7,440 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="{% static '/vendor/mdb/css/mdb2.min.css'%}" />
-    <link rel="stylesheet" href="{% static '/signup.css'%}" />
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        perspective: 1000px;
+      }
+
+      .loginRegisterCard {
+        position: relative;
+        width: 440px;
+        max-width: 100%;
+        height: 700px;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+      }
+
+      .front,
+      .back {
+        padding: 20px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+      .loginForm {
+        height: 100px !important;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .front {
+        transform: rotateY(0deg);
+      }
+
+      .back {
+        transform: rotateY(180deg);
+      }
+
+      .is-flipped {
+        transform: rotateY(180deg);
+      }
+    </style>
   </head>
   <body>
-        {% if messages %}  
-	      {% for message in messages %}
-	      <div class="alert alert-{{message.tags}} fade show " role="alert" data-mdb-position="top-right" data-mdb-autohide="true" data-mdb-delay="4000" style="z-index: 100; margin-top: 70px;">
-	        <strong>{{message}}</strong>
-	        <button type="button" class="btn-close" data-mdb-dismiss="alert" aria-label="Close"></button>
-	      </div>
-	      {% endfor %}
-	    {% endif %}
-    <div class="section">
-      <div class="container">
-        <div class="row full-height justify-content-center">
-          <div class="col-12 text-center align-self-center py-5">
-            <div class="section pb-5 pt-5 pt-sm-2 text-center">
-              <h6 class="mb-0 pb-3">
-                <span>Log In </span><span>Sign Up</span>
-              </h6>
+    {% if messages %} {% for message in messages %}
+    <div
+      class="alert alert-{{message.tags}} fade show "
+      role="alert"
+      data-mdb-position="top-right"
+      data-mdb-autohide="true"
+      data-mdb-delay="4000"
+      style="z-index: 100; margin-top: 70px"
+    >
+      <strong>{{message}}</strong>
+      <button
+        type="button"
+        class="btn-close"
+        data-mdb-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+    {% endfor %} {% endif %}
+    <div class="container">
+      <div class="loginRegisterCard">
+        <div class="front">
+          <h2>Login</h2>
+          <form method="post" action="login">
+            {% csrf_token %}
+            <div class="text-center mb-3">
+              <p>Sign in with:</p>
+              <button type="button" class="btn btn-secondary btn-floating mx-1">
+                <i class="fab fa-facebook-f"></i>
+              </button>
+
+              <button type="button" class="btn btn-secondary btn-floating mx-1">
+                <i class="fab fa-google"></i>
+              </button>
+            </div>
+
+            <p class="text-center">or:</p>
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
               <input
-                class="checkbox"
-                type="checkbox"
-                id="reg-log"
-                name="reg-log"
+                type="text"
+                id="logUsername"
+                name="logUsername"
+                class="form-control"
               />
-              <label for="reg-log"></label>
-              <div class="card-3d-wrap mx-auto">
-                <div class="card-3d-wrapper">
-                  <div class="card-front">
-                    <div class="center-wrap">
-                      <div class="section text-center">
-                        <h4 class="mb-4 pb-3">Log In</h4>
-                        <form method="post" action="login">
-                          {% csrf_token %}
-                          <div class="form-group">
-                            <input type="text" id="username" class="form-style" name = "username" placeholder="Enter Username" required autofocus>
-                            <i class="input-icon uil uil-at"></i>
-                          </div>
-                          <div class="form-group mt-2">
-                            <input type="password" id="inputPassword" class="form-style" name = "password" placeholder="Password" required>
+              <label class="form-label" for="logUsername"
+                >Email or username</label
+              >
+            </div>
 
-                            <i class="input-icon uil uil-lock-alt"></i>
-                          </div>
-                          <input class="btn mt-4" type="submit"/>
-                          <!-- <a href="/login" class="btn mt-4" type="submit">submit</a> -->
-                        </form>
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <input
+                type="password"
+                id="loginPassword"
+                name="loginpassword"
+                class="form-control"
+              />
+              <label class="form-label" for="loginPassword">Password</label>
+            </div>
 
-                        <p class="mb-0 mt-4 text-center">
-                          <a href="#0" class="link">Forgot your password?</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-back">
-                    <div class="center-wrap">
-                      <div class="section text-center">
-                        <h4 class="mb-4 pb-3">Sign Up</h4>
-                        <form method="post" action="register">
-                          {% csrf_token %}
-                          <div class="form-group">
-                            <input
-                              type="text"
-                              name="logname"
-                              class="form-style"
-                              placeholder="Your Full Name"
-                              id="logname"
-                              autocomplete="off"
-                            />
-                            <i class="input-icon uil uil-user"></i>
-                          </div>
-                          <div class="form-group mt-2">
-                            <input
-                              type="email"
-                              name="logemail"
-                              class="form-style"
-                              placeholder="Your Email"
-                              id="logemail"
-                              autocomplete="off"
-                            />
-                            <i class="input-icon uil uil-at"></i>
-                          </div>
-                          <div class="form-group mt-2">
-                            <input
-                              type="password"
-                              name="logpass"
-                              class="form-style"
-                              placeholder="Your Password"
-                              id="logpass"
-                              autocomplete="off"
-                            />
-                            <i class="input-icon uil uil-lock-alt"></i>
-                          </div>
-                          <input class="btn mt-4" type="submit">
-                          {% comment %} <a href="#" class="btn mt-4">submit</a> {% endcomment %}
-                        </form>
-                      </div>
-                    </div>
-                  </div>
+            <!-- 2 column grid layout -->
+            <div class="row mb-4">
+              <div class="col-md-6 d-flex justify-content-center">
+                <!-- Checkbox -->
+                <div class="form-check mb-3 mb-md-0">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="loginCheck"
+                    checked
+                  />
+                  <label class="form-check-label" for="loginCheck">
+                    Remember me
+                  </label>
                 </div>
               </div>
+
+              <div class="col-md-6 d-flex justify-content-center">
+                <!-- Simple link -->
+                <a href="#!">Forgot password?</a>
+              </div>
+            </div>
+
+            <!-- Submit button -->
+            {% comment %}
+            <button type="submit" class="btn btn-primary btn-block mb-4">
+              Sign in
+            </button>
+            {% endcomment %}
+            <input class="btn mt-4" type="submit" />
+
+            <!-- Register buttons -->
+            <div class="text-center">
+              <p>Not a member? <a href="#!">Register</a></p>
+            </div>
+          </form>
+        </div>
+        <div class="back">
+          <h2>Sign Up</h2>
+          <!-- Pills navs -->
+          <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link active"
+                id="tab-login"
+                data-mdb-toggle="pill"
+                href="#pills-login"
+                role="tab"
+                aria-controls="pills-login"
+                aria-selected="true"
+                >Sign Up</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="tab-register"
+                data-mdb-toggle="pill"
+                href="#pills-register"
+                role="tab"
+                aria-controls="pills-register"
+                aria-selected="false"
+                >Register as Property Owner</a
+              >
+            </li>
+          </ul>
+          <!-- Pills navs -->
+
+          <!-- Pills content -->
+          <div class="tab-content">
+            <div
+              class="tab-pane fade show active"
+              id="pills-login"
+              role="tabpanel"
+              aria-labelledby="tab-login"
+            >
+              <form method="post" action="register">
+                {% csrf_token %}
+                <div class="text-center mb-3">
+                  <p>Sign up with:</p>
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-floating mx-1"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-floating mx-1"
+                  >
+                    <i class="fab fa-google"></i>
+                  </button>
+                </div>
+
+                <p class="text-center">or :</p>
+
+                <!-- Name input -->
+                <div class="form-outline mb-4">
+                  <input
+                    type="text"
+                    id="registerName"
+                    name="registerName"
+                    class="form-control"
+                  />
+                  <label class="form-label" for="registerName"
+                    >Your Full Name</label
+                  >
+                </div>
+
+                <!-- Username input -->
+                <div class="form-outline mb-4">
+                  <input
+                    type="text"
+                    id="registerUsername"
+                    name="registerUsername"
+                    class="form-control"
+                  />
+                  <label class="form-label" for="registerUsername"
+                    >Username</label
+                  >
+                </div>
+
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input
+                    type="email"
+                    id="registerEmail"
+                    name="registerEmail"
+                    class="form-control"
+                  />
+                  <label class="form-label" for="registerEmail">Email</label>
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input
+                    type="password"
+                    id="registerPassword"
+                    name="registerPassword"
+                    class="form-control"
+                  />
+                  <label class="form-label" for="registerPassword"
+                    >Password</label
+                  >
+                </div>
+
+                <!-- Repeat Password input -->
+                <div class="form-outline mb-4">
+                  <input
+                    type="password"
+                    id="registerRepeatPassword"
+                    class="form-control"
+                  />
+                  <label class="form-label" for="registerRepeatPassword"
+                    >Repeat password</label
+                  >
+                </div>
+
+                <!-- Checkbox -->
+                <div class="form-check d-flex justify-content-center mb-4">
+                  <input
+                    class="form-check-input me-2"
+                    type="checkbox"
+                    value=""
+                    id="registerCheck"
+                    checked
+                    aria-describedby="registerCheckHelpText"
+                  />
+                  <label class="form-check-label" for="registerCheck">
+                    I have read and agree to the terms
+                  </label>
+                </div>
+
+                <!-- Submit button -->
+                {% comment %}
+                <button type="submit" class="btn btn-primary btn-block mb-3">
+                  Sign in
+                </button>
+                {% endcomment %}
+                <input class="btn mt-4" type="submit" />
+              </form>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-register"
+              role="tabpanel"
+              aria-labelledby="tab-register"
+            >
+              <form method="post" action="register/seller">
+                {% csrf_token %}
+                <div class="text-center mb-3">
+                  <p>Sign up with:</p>
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-floating mx-1"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-floating mx-1"
+                  >
+                    <i class="fab fa-google"></i>
+                  </button>
+                </div>
+
+                <p class="text-center">or:</p>
+
+                <!-- Name input -->
+                <div class="form-outline mb-4">
+                  <input
+                    type="text"
+                    id="registerName"
+                    name="registerName"
+                    class="form-control"
+                  />
+                  <label class="form-label" for="registerName"
+                    >Your Full Name</label
+                  >
+                </div>
+
+                <!-- Username input -->
+                <div class="form-outline mb-4">
+                  <input
+                    type="text"
+                    id="registerUsername"
+                    name="registerUsername"
+                    class="form-control"
+                  />
+                  <label class="form-label" for="registerUsername"
+                    >Username</label
+                  >
+                </div>
+
+                <!-- Username input -->
+                <div class="form-outline mb-4">
+                  <input
+                    type="number"
+                    id="registerPhone"
+                    name="registerPhone"
+                    class="form-control"
+                  />
+                  <label class="form-label" for="registerPhone"
+                    >Phone Number</label
+                  >
+                </div>
+
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input
+                    type="email"
+                    id="registerEmail"
+                    name="registerEmail"
+                    class="form-control"
+                  />
+                  <label class="form-label" for="registerEmail">Email</label>
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input
+                    type="password"
+                    id="registerPassword"
+                    name="registerPassword"
+                    class="form-control"
+                  />
+                  <label class="form-label" for="registerPassword"
+                    >Password</label
+                  >
+                </div>
+
+                <!-- Repeat Password input -->
+                <div class="form-outline mb-4">
+                  <input
+                    type="password"
+                    id="registerRepeatPassword"
+                    class="form-control"
+                  />
+                  <label class="form-label" for="registerRepeatPassword"
+                    >Repeat password</label
+                  >
+                </div>
+
+                <!-- Checkbox -->
+                <div class="form-check d-flex justify-content-center mb-4">
+                  <input
+                    class="form-check-input me-2"
+                    type="checkbox"
+                    value=""
+                    id="registerSellerCheck"
+                    checked
+                    aria-describedby="registerSellerCheckHelpText"
+                  />
+                  <label class="form-check-label" for="registerSellerCheck">
+                    I have read and agree to the terms
+                  </label>
+                </div>
+
+                <!-- Submit button -->
+                {% comment %}
+                <button type="submit" class="btn btn-primary btn-block mb-3">
+                  Sign in
+                </button>
+                {% endcomment %}
+                <input class="btn mt-4" type="submit" />
+              </form>
             </div>
           </div>
+          <!-- Pills content -->
         </div>
       </div>
     </div>
 
+    <button id="rotate-btn">Rotate</button>
+
     <script src="{% static '/vendor/mdb/js/mdb2.min.js'%}"></script>
+    <script type="text/javascript">
+      const rotateBtn = document.getElementById("rotate-btn");
+      const card = document.querySelector(".loginRegisterCard");
+
+      rotateBtn.addEventListener("click", () => {
+        card.classList.toggle("is-flipped");
+      });
+    </script>
   </body>
 </html>
