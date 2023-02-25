@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'accounts',
+    
 ]
 
 MIDDLEWARE = [
@@ -75,17 +77,22 @@ WSGI_APPLICATION = 'ProductONE.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'productONE',
+#         'USER': 'postgres',
+#         'PASSWORD': 'pass',
+#         'HOST': 'localhost'
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'productONE',
-        'USER': 'postgres',
-        'PASSWORD': 'pass',
-        'HOST': 'localhost'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
     }
 }
-
-
+AUTH_USER_MODEL = 'accounts.User'
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
