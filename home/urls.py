@@ -8,4 +8,5 @@ urlpatterns = [
 	path("reviews",views.reviews, name="reviews"),
 	path("contact",views.contact, name="contact "), 
 	path("cityRooms",views.cityRooms, name="cityRooms"),
+	path("createAd",views.createPropertyAd, name="createPropertyAd"),
 ]

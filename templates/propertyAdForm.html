@@ -1,0 +1,114 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block title %}Create AD{% endblock title %} 
+
+{% block body %}
+<div class="container" style="margin-top: 100px;">
+    <form action="#" method="post">
+      <div class="input-group mb-3">
+        <span class="input-group-text border-0" id="Name"><i class="fas fa-search"></i></span>
+        <input
+          type="text"
+          class="form-control rounded"
+          placeholder="Name"
+          aria-label="Name"
+        />
+      </div>
+      
+      <div class="input-group mb-3">
+        <span class="input-group-text border-0" id="basic-addon1">@</span>
+        <input
+          type="email"
+          class="form-control rounded"
+          placeholder="Owner Email (must be registered)"
+          aria-label="Email"
+          aria-describedby="basic-addon1"
+        />
+      </div>
+      
+      
+      <div class="input-group mb-3">
+        <span class="input-group-text border-0">$</span>
+        <input
+          type="text"
+          class="form-control rounded"
+          placeholder="Min Rent amount"
+          aria-label="Amount (to the nearest dollar)"
+        />
+        <span class="input-group-text border-0">.00</span>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text border-0">$</span>
+        <input
+          type="text"
+          class="form-control rounded"
+          placeholder="Max Rent amount"
+          aria-label="Amount (to the nearest dollar)"
+        />
+        <span class="input-group-text border-0">.00</span>
+      </div>
+      
+      <div class="input-group mb-3">
+        <span class="input-group-text border-0">Description</span>
+        <textarea class="form-control rounded" aria-label="With textarea"></textarea>
+      </div>
+      <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupFile01">File 1 Upload</label>
+        <input type="file" class="form-control" id="inputGroupFile01" />
+      </div>
+      <div class="input-group mb-3">
+        <input type="file" class="form-control" id="inputGroupFile02" />
+        <label class="input-group-text" for="inputGroupFile02">File 2 Upload</label>
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">Latitude & longitude</span>
+        <input type="text" aria-label="latitude" class="form-control" />
+        <input type="text" aria-label="longitude" class="form-control" />
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">Number of Rooms</span>
+        <input type="number" class="form-control" />
+      </div>
+      
+      <h5>address</h5>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+
+          <select class="select">
+            <option value="1">State</option>
+            <option value="2">Option 1</option>
+            <option value="3">Option 2</option>
+            <option value="4">Option 3</option>
+          </select>
+
+        </div>
+        <div class="col-md-6 mb-4">
+
+          <select class="select">
+            <option value="1">City</option>
+            <option value="2">Option 1</option>
+            <option value="3">Option 2</option>
+            <option value="4">Option 3</option>
+          </select>
+
+        </div>
+      </div>
+
+      <div class="form-outline mb-4">
+        <input type="text" id="form3Example90" class="form-control form-control-lg" />
+        <label class="form-label" for="form3Example90">Pincode</label>
+      </div>
+
+
+
+      <div class="d-flex justify-content-end pt-3">
+        <button type="button" class="btn btn-light btn-lg">Reset all</button>
+        <input class="btn btn-warning btn-lg ms-2" type="submit" >
+      </div>
+
+    
+    </form>
+  </div>
+  {% endblock body %}
