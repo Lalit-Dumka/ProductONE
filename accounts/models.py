@@ -17,7 +17,7 @@ class User(AbstractBaseUser):
 
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    username= models.CharField(max_length = 45,unique=True)
+    username= models.CharField(max_length = 50,unique=True)
     email = models.CharField(max_length=50,unique=True)
     phone_number = models.CharField(max_length=13,blank=True)
     # role = models.PositiveSmallIntegerField(choices =ROLE_CHOICE, blank = True,null = True )
@@ -34,12 +34,12 @@ class User(AbstractBaseUser):
     is_active = models.BooleanField(default=True)
     is_superuser = models.BooleanField(default=False)
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username',]
+    REQUIRED_FIELDS = ['username']
 
     objects = UserManager()
     
     def __str__(self):
-        return self.username
+        return self.email
     def has_perm(self, perm, obj=None):
         "Does the user have a specific permission?"
         # Simplest possible answer: Yes, always

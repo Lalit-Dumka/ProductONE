@@ -32,3 +32,5 @@ def contact(request):
     return HttpResponse("this is contact us page")
 def cityRooms(request):
     return render(request,'cityRooms.html')
+def createPropertyAd(request):
+    return render(request,'propertyAdForm.html')

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from home import views
 urlpatterns = [
 	path("",views.index, name="home"),
@@ -8,4 +8,5 @@ urlpatterns = [
 	path("reviews",views.reviews, name="reviews"),
 	path("contact",views.contact, name="contact "), 
 	path("cityRooms",views.cityRooms, name="cityRooms"),
+	path("createAd",views.createPropertyAd, name="createPropertyAd"),
 ]
