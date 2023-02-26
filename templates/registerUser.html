@@ -76,21 +76,24 @@
       <div class="loginRegisterCard">
         <div class="front">
           <h2>Login</h2>
+
+          <div class="text-center mb-3">
+            <p>Sign in with:</p>
+            <button
+              type="button"
+              class="btn btn-secondary btn-floating mx-1 text-black"
+            >
+              <i class="fab fa-facebook"></i>
+            </button>
+
+            <button type="button" class="btn btn-secondary btn-floating mx-1">
+              <i class="fab fa-google"></i>
+            </button>
+          </div>
+
+          <p class="text-center">or:</p>
           <form method="post" action="login">
             {% csrf_token %}
-            <div class="text-center mb-3">
-              <p>Sign in with:</p>
-              <button type="button" class="btn btn-secondary btn-floating mx-1">
-                <i class="fab fa-facebook-f"></i>
-              </button>
-
-              <button type="button" class="btn btn-secondary btn-floating mx-1">
-                <i class="fab fa-google"></i>
-              </button>
-            </div>
-
-            <p class="text-center">or:</p>
-
             <!-- Email input -->
             <div class="form-outline mb-4">
               <input
@@ -145,7 +148,7 @@
               Sign in
             </button>
             {% endcomment %}
-            <input class="btn mt-4" type="submit" />
+            <input class="btn btn-primary btn-block mb-3" type="submit" />
 
             <!-- Register buttons -->
             <div class="text-center">
@@ -296,7 +299,7 @@
                   Sign in
                 </button>
                 {% endcomment %}
-                <input class="btn mt-4" type="submit" />
+                <input class="btn btn-primary btn-block mb-3" type="submit" />
               </form>
             </div>
             <div
@@ -422,7 +425,7 @@
                   Sign in
                 </button>
                 {% endcomment %}
-                <input class="btn mt-4" type="submit" />
+                <input class="btn btn-primary btn-block mb-3" type="submit" />
               </form>
             </div>
           </div>
